@@ -32,7 +32,6 @@ BASE_STYLE= { #Aquí predefinimos los estilos
 
 
 title_style= dict(
-    size="lg",
     width="100%",
     padding_top=Spacer.DEFAULT.value
 )
