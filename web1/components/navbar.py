@@ -1,15 +1,16 @@
 import reflex as rx
+import web1.styles.styles as styles
 
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.text(
             "ASORMAR",
-            height="40px",
             weight="medium"
         ),
         position="sticky",
-        bg="red",
-        padding_x="16px",
-        padding_y="8px",
-        z_index=999 # para asegurarse que siempre está en la parte de arriba
+        bg=rx.color("blue",3), # https://www.radix-ui.com/colors
+        padding_x=styles.Spacer.DEFAULT,
+        padding_y=styles.Spacer.SMALL,
+        z_index=999, # keeps navbar on top
+        top=0 # to overpose the navbar while scrolling
     )
