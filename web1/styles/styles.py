@@ -3,7 +3,7 @@ import reflex as rx
 
 
 #Constants
-MAX_WIDTH= "40%"
+MAX_WIDTH= "35%"
 MARGIN_Y= "20px"
 
 #Sizes
@@ -30,6 +30,12 @@ BASE_STYLE= { #Aquí predefinimos los estilos
     }
 }
 
+
+title_style= dict(
+    size="lg",
+    width="100%",
+    padding_top=Spacer.DEFAULT.value
+)
 
 button_title_style= dict(
     font_size=Spacer.DEFAULT.value
