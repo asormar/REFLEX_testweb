@@ -1,6 +1,7 @@
 import reflex as rx
 import web1.styles.styles as styles
 from web1.components.link_icon import link_icon
+from web1.components.info_text import info_text
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -20,6 +21,16 @@ def header() -> rx.Component:
             )
 
         ),
+
+        rx.flex(
+            info_text("Python", "web development"),
+            rx.spacer(), # push the element as far as possible
+            info_text("Murakami", "fan reader"),
+            rx.spacer(),
+            info_text("+21 years", "breaking it"),
+            width="100%" # need to make work the spacers
+        ),
+
         rx.text("Soy estudiante de GTDM en la Universidad Politécnica de Valencia y estoy creando esta página web de enlaces para probar el framework de python llamado REFLEX",
                 margin_top= styles.Spacer.DEFAULT.value),
         align_items="start"
