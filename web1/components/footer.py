@@ -16,6 +16,7 @@ def footer() -> rx.Component:
             color=colors.TextColor.FOOTER
         ),
         rx.text("TRYING TO BUILD SOME PROJECTS FROM VALENCIA", font_size=styles.Spacer.MEDIUM, margin_top="-8px"),
+        margin_top=styles.Spacer.BIG,
         margin_bottom=styles.Spacer.BIG,
         padding_bottom=styles.Spacer.BIG,
         align="center",

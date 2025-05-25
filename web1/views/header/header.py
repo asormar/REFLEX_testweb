@@ -9,8 +9,10 @@ def header() -> rx.Component:
         rx.hstack(
             rx.avatar(fallback="AS", size="7", radius="full", bg=rx.color("blue",3)),
             rx.vstack(
-                rx.heading("Alejandro SM", size="6", color=TextColor.HEADER),
-                rx.text("@asormar1", margin_top="-15px", color=TextColor.BODY),
+                rx.heading("Alejandro SM", size="6"), # put here size cause is a reflex conditional, not css
+                rx.text("@asormar1",
+                        margin_top="-15px",
+                        color=TextColor.BODY),
 
                 rx.hstack(
                     link_icon("https://www.instagram.com"),

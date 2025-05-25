@@ -8,7 +8,8 @@ def navbar() -> rx.Component:
         rx.box(
             rc.span("a", color=colors.Colors.PRIMARY),
             rc.span("sor", color=colors.Colors.SECONDARY),
-            rc.span("mar", color=colors.Colors.PRIMARY)
+            rc.span("mar", color=colors.Colors.PRIMARY),
+            style=styles.navbar_title_style
         ),
         position="sticky",
         bg=colors.Colors.CONTENT, # https://www.radix-ui.com/colors
