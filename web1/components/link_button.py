@@ -1,11 +1,12 @@
 import reflex as rx
+import reflex_chakra as rc
 import web1.styles.styles as styles
 
 def link_button(title:str, body:str, url:str) -> rx.Component: #es necesario poner :str
     return rx.link(
-        rx.button(
+        rc.button(
             rx.hstack(
-                rx.icon(tag="arrow-big-right-dash", width=styles.Spacer.BIG, height=styles.Spacer.BIG),
+                rx.icon(tag="arrow-big-right-dash", width=styles.Spacer.BIG, height=styles.Spacer.BIG, margin_top="3px"),
                 rx.vstack(
                     rx.text(title, style=styles.button_title_style),
                     rx.text(body, style=styles.button_body_style)

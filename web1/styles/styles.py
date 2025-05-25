@@ -1,5 +1,8 @@
 from enum import Enum
 import reflex as rx
+import reflex_chakra as rc
+from .colors import Colors as Colors
+from .colors import TextColor as TextColor
 
 
 #Constants
@@ -14,32 +17,41 @@ class Spacer(Enum):
     BIG= "3em"
 
 #Styles
-BASE_STYLE= { #Aquí predefinimos los estilos
-    rx.button :{
+BASE_STYLE= { #Aquí predefinimos los estilos con css
+    "background_color": Colors.BACKGROUND,
+
+    rx.button and rc.button:{
         "width":"100%",
         "height":"100%",
         "display":"block",
         "padding":Spacer.SMALL.value,
-        "border_radius":Spacer.DEFAULT.value
+        "border_radius":Spacer.DEFAULT.value,
+        "color":TextColor.HEADER,
+        "background_color": Colors.CONTENT,
+        "_hover":{
+            "background_color": Colors.SECONDARY
+        } #modifier that appear when mouse is on the element
     },
 
-    rx.link :{
+    rx.link and rc.link :{
         "underline":"none",
-        "color":"black",
         "_hover":{}
-    }
+    },
 }
 
 
 title_style= dict(
     width="100%",
-    padding_top=Spacer.DEFAULT.value
+    padding_top=Spacer.DEFAULT.value,
+    color=TextColor.HEADER
 )
 
 button_title_style= dict(
-    font_size=Spacer.DEFAULT.value
+    font_size=Spacer.DEFAULT.value,
+    color=TextColor.HEADER
 )
 
 button_body_style= dict(
-    font_size=Spacer.MEDIUM.value
+    font_size=Spacer.MEDIUM.value,
+    color=TextColor.BODY
 )

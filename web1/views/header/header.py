@@ -1,5 +1,6 @@
 import reflex as rx
 import web1.styles.styles as styles
+from web1.styles.colors import TextColor
 from web1.components.link_icon import link_icon
 from web1.components.info_text import info_text
 
@@ -8,8 +9,8 @@ def header() -> rx.Component:
         rx.hstack(
             rx.avatar(fallback="AS", size="7", radius="full", bg=rx.color("blue",3)),
             rx.vstack(
-                rx.heading("Alejandro SM", size="6"),
-                rx.text("@asormar1", margin_top="-15px"),
+                rx.heading("Alejandro SM", size="6", color=TextColor.HEADER),
+                rx.text("@asormar1", margin_top="-15px", color=TextColor.BODY),
 
                 rx.hstack(
                     link_icon("https://www.instagram.com"),
@@ -33,6 +34,7 @@ def header() -> rx.Component:
         ),
 
         rx.text("Soy estudiante de GTDM en la Universidad Politécnica de Valencia y estoy creando esta página web de enlaces para probar el framework de python llamado REFLEX",
-                margin_top= styles.Spacer.DEFAULT.value),
+                margin_top= styles.Spacer.DEFAULT.value,
+                color=TextColor.BODY),
         align_items="start"
     )
