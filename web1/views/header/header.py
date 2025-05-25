@@ -18,7 +18,8 @@ def header() -> rx.Component:
                 ),
                 
                 padding_top=styles.Spacer.DEFAULT
-            )
+            ),
+            spacing="4" #creates an space between avatar and vstack
 
         ),
 
