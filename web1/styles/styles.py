@@ -16,7 +16,9 @@ class Spacer(Enum):
     MEDIUM= "0.8em"
     DEFAULT= "1em"
     LARGE= "1.5em"
-    BIG= "3em"
+    VERY_LARGE="2.5em"
+    BIG= "3em",
+    VERY_BIG="7em"
 
 #Styles
 BASE_STYLE= { #Aquí predefinimos los estilos con css

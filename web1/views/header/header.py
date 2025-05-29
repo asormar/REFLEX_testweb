@@ -1,13 +1,22 @@
 import reflex as rx
 import web1.styles.styles as styles
 from web1.styles.colors import TextColor
+from web1.styles.colors import Colors
 from web1.components.link_icon import link_icon
 from web1.components.info_text import info_text
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(fallback="AS", size="7", radius="full", bg=rx.color("blue",3)),
+            rx.avatar(fallback="AS",
+                      size="7",
+                      src="foto.jpeg",
+                      radius="full",
+                      bg=Colors.BACKGROUND.value,
+                      padding="2px",
+                      border="solid 4px",
+                      border_color=Colors.PRIMARY.value
+                      ),
             rx.vstack(
                 rx.heading("Alejandro SM", size="6"), # put here size cause is a reflex conditional, not css
                 rx.text("@asormar1",
@@ -15,9 +24,9 @@ def header() -> rx.Component:
                         color=TextColor.BODY),
 
                 rx.hstack(
-                    link_icon("https://www.instagram.com"),
-                    link_icon("https://link.chess.com/friend/g9q6ml"),
-                    link_icon("https://www.goodreads.com/user/show/181296324-alejandro-sorolla")
+                    link_icon("icons/instagram.png","https://www.instagram.com"),
+                    link_icon("icons/chess.png","https://link.chess.com/friend/g9q6ml"),
+                    link_icon("icons/book.png","https://www.goodreads.com/user/show/181296324-alejandro-sorolla")
                 ),
                 
                 padding_top=styles.Spacer.DEFAULT
@@ -35,7 +44,7 @@ def header() -> rx.Component:
             width="100%" # need to make work the spacers
         ),
 
-        rx.text("Soy estudiante de GTDM en la Universidad Politécnica de Valencia y estoy creando esta página web de enlaces para probar el framework de python llamado REFLEX",
+        rx.text("I am a GTDM student at the Polytechnic University of Valencia and I am creating this web page of links to test the python framework called REFLEX.",
                 margin_top= styles.Spacer.DEFAULT.value,
                 color=TextColor.BODY),
         align_items="start"

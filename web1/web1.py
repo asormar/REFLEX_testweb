@@ -30,9 +30,14 @@ def index() -> rx.Component:
     )
 
 app= rx.App(
-    style= styles.BASE_STYLE,
-    
+    style= styles.BASE_STYLE,    
     stylesheets= font_links
 )
-app.add_page(index)
+
+
+app.add_page(
+    index,
+    title="asormar | Learning how to code cool things",
+    description="I am a GTDM student at the Polytechnic University of Valencia and I am creating this web page of links to test the python framework called REFLEX",
+    )
 
