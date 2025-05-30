@@ -41,11 +41,12 @@ BASE_STYLE= { #Aquí predefinimos los estilos con css
     rx.button and rc.button:{
         "width":"100%",
         "height":"100%",
-        "display":"block",
         "padding":Spacer.SMALL.value,
         "border_radius":Spacer.DEFAULT.value,
         "color":TextColor.HEADER,
         "background_color": Colors.CONTENT,
+        "white_space": "normal",
+        "justify_content":"start",
         "_hover":{
             "background_color": Colors.SECONDARY
         } #modifier that appear when mouse is on the element

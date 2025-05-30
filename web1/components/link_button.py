@@ -14,10 +14,14 @@ def link_button(title:str, body:str, icon:str, url:str) -> rx.Component: #es nec
                 rx.vstack(
                     rx.text(title, style=styles.button_title_style, margin_top="8px", margin_bottom="-2px"),
                     rx.text(body, style=styles.button_body_style, margin_top="-1px"),
+                    align_items="start",
+                    text_align="start",
                     spacing="0" #space among both texts
                 )
                 
-            )
+            ),width="100%",
+            
+            
         ),
 
         href= url,

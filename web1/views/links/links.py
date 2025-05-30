@@ -1,6 +1,7 @@
 import reflex as rx
 from web1.components.link_button import link_button
 from web1.components.title import title
+import web1.styles.styles as styles
 
 def links() -> rx.Component:
     return rx.vstack(
@@ -21,8 +22,8 @@ def links() -> rx.Component:
                     "icons/cv.png",
                     "https://drive.google.com/file/d/1fOvrG16i_YipdfkYpa1Eyurt8oJWV6Hg/view?usp=sharing"),
 
-        width="100%" #hace que los botones ocupen el max_width del center de web1.py
-
+        width="100%", #hace que los botones ocupen el max_width del center de web1.py
+        border="solid",
         
 
     )

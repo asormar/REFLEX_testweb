@@ -21,6 +21,7 @@ def footer() -> rx.Component:
         margin_top=styles.Spacer.BIG,
         margin_bottom=styles.Spacer.BIG,
         padding_bottom=styles.Spacer.BIG,
+        padding_x=styles.Spacer.BIG,
         align="center",
         color=colors.TextColor.FOOTER
     )
