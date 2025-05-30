@@ -4,6 +4,7 @@ import reflex_chakra as rc
 from .colors import Colors as Colors
 from .colors import TextColor as TextColor
 from .fonts import Font as Font
+from .fonts import FontWeight as FontWeight
 
 
 #Constants
@@ -20,14 +21,21 @@ class Spacer(Enum):
     BIG= "3em",
     VERY_BIG="7em"
 
+STYLESHEETS= [
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
+    "https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap"
+]
+
 #Styles
 BASE_STYLE= { #Aquí predefinimos los estilos con css
     "background_color": Colors.BACKGROUND,
     "font_family":Font.DEFAULT,
+    "font_weight":FontWeight.LIGHT,
 
     rx.heading:{
         "color":TextColor.HEADER,
-        "font_family":Font.TITLE.value
+        "font_family":Font.TITLE.value,
+        "font_weight":FontWeight.BOLD,
     },
 
     rx.button and rc.button:{
@@ -52,7 +60,8 @@ BASE_STYLE= { #Aquí predefinimos los estilos con css
 
 navbar_title_style= {
     "font_family": Font.LOGO,
-    "font_size":Spacer.LARGE
+    "font_size":Spacer.LARGE,
+    "font_weight":FontWeight.MEDIUM,
 }
 
 title_style= {
@@ -60,15 +69,18 @@ title_style= {
     "padding_top":Spacer.DEFAULT.value,
     "color":TextColor.HEADER,
     "font_family":Font.TITLE.value,
+    "font_weight":FontWeight.MEDIUM,
 }
 
 button_title_style= {
     "font_size":Spacer.DEFAULT.value,
     "color":TextColor.HEADER,
     "font_family":Font.TITLE.value,
+    "font_weight":FontWeight.MEDIUM,
 }
 
 button_body_style= {
     "font_size":Spacer.MEDIUM.value,
     "color":TextColor.BODY,
+    "font_weight":FontWeight.LIGHT
 }

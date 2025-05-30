@@ -4,7 +4,6 @@ from web1.components.footer import footer
 from web1.views.header.header import header
 from web1.views.links.links import links
 import web1.styles.styles as styles
-from web1.styles.fonts import font_links
 
 class State(rx.State): #Esto es para añadir el back en algún momento
     pass
@@ -31,7 +30,7 @@ def index() -> rx.Component:
 
 app= rx.App(
     style= styles.BASE_STYLE,    
-    stylesheets= font_links
+    stylesheets= styles.STYLESHEETS
 )
 
 

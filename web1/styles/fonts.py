@@ -1,12 +1,11 @@
 from enum import Enum
 
 class Font(Enum):
-    DEFAULT="Poppins-Light"
-    TITLE="Poppins-Bold"
+    DEFAULT="Poppins"
+    TITLE="Poppins"
     LOGO="WDXL Lubrifont TC"
 
-font_links=[
-        "https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap",
-        "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap",
-        "https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-    ]
+class FontWeight(Enum):
+    LIGHT= "300"
+    MEDIUM= "500"
+    BOLD= "700"
