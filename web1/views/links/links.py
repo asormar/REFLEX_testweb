@@ -23,7 +23,7 @@ def links() -> rx.Component:
                     "https://drive.google.com/file/d/1fOvrG16i_YipdfkYpa1Eyurt8oJWV6Hg/view?usp=sharing"),
 
         width="100%", #hace que los botones ocupen el max_width del center de web1.py
-        border="solid",
+        #border="solid",
         
 
     )
